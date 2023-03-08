@@ -13,10 +13,10 @@ const columnNames = ['Name', 'State', 'Phone', 'Twitter'];
 
 
 /* Your code goes here */
-export function SenatorTable(props){
-  const rows = props.senators.map((senators) => (
-    <SenatorRow key={senators.id} senatorData={senators} />
-  ));
+export function SenatorTable(senatorsList) {
+  const rows = senatorsList.senatorsList.map((senatorsArray) => {
+    return <SenatorRow key={senatorsArray.id} senatorData={senatorsArray} />
+});
   return(
     <table className="table table-bordered">
       <TableHeader columnNames={columnNames}/>

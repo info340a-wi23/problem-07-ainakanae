@@ -5,12 +5,12 @@ import { SenatorTable } from './SenatorTable';
 /* Your code goes here */
 
 
-export function App(props){
+export function App(senatorsList){
 
     return (
         <div className='container'>
             <h1>US Senators (Jan 2022)</h1>
-            <SenatorTable senators={props.senators}/>
+            <SenatorTable senatorsList={senatorsList.senatorsList}/>
            
         </div>
     )
